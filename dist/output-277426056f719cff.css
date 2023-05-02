@@ -1,0 +1,216 @@
+@import url("https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf");
+
+/* Import JetBrains Mono Nerd Font */
+
+/* Define Bluey and Bingo color palette */
+
+:root {
+  --bluey-darker: #09233b;
+  --bluey-dark: #0b3d91;
+  --bluey-medium: #1e88e5;
+  --bluey-light: #6ab7ff;
+  --bluey-lightest: #bbdefb;
+  --bluey-text: #e3f2fd;
+  --bluey-accent: #ffa726;
+  --bingo-dark: #b36c66;
+  --bingo-medium: #e4897b;
+  --bingo-light: #f4afa6;
+}
+
+/* General styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--bluey-darker);
+  color: var(--bluey-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+a {
+  color: var(--bingo-medium);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--bluey-medium);
+}
+
+button {
+  background-color: var(--bluey-medium);
+  border: none;
+  color: var(--bluey-text);
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--bluey-light);
+}
+
+input,
+textarea,
+select {
+  background-color: var(--bluey-lightest);
+  color: var(--bluey-dark);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: var(--bluey-light);
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bluey-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bluey-medium);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bluey-light);
+}
+
+/* Responsive layout styles */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--bluey-text);
+}
+
+#forkongithub a {
+  background: #6ab7ff;
+  color: #fff;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 40px;
+  font-size: 1rem;
+  line-height: 2rem;
+  position: relative;
+  transition: 0.5s;
+}
+
+#forkongithub a:hover {
+  background: #e4897b;
+  color: #fff;
+}
+
+#forkongithub a::before,
+#forkongithub a::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 1px;
+  background: #fff;
+}
+
+#forkongithub a::after {
+  bottom: 1px;
+  top: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  #forkongithub {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 200px;
+    overflow: hidden;
+    height: 200px;
+    z-index: 9999;
+  }
+
+  #forkongithub a {
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    right: -60px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* New footer styles */
+
+footer {
+  background-color: var(--bluey-darker);
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 16px;
+  }
+}
