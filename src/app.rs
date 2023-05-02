@@ -8,7 +8,7 @@ pub fn App(cx: Scope) -> impl IntoView {
 
     view! {
         cx,
-        <Title text="Welcome to Leptos" />
+        <Title text="Welcome to Blueysh" />
         <Router>
             <Routes>
                 <Route path="" view=move |cx| view! { cx, <HomePage /> } />
@@ -19,22 +19,24 @@ pub fn App(cx: Scope) -> impl IntoView {
 
 #[component]
 pub fn HomePage(cx: Scope) -> impl IntoView {
-    let (count, set_count) = create_signal(cx, 0);
     view! {
         cx,
-        <main class="my-0 mx-auto max-w-3xl text-center">
-            <h2 class="p-6 text-4xl">"Welcome to Leptos with Tailwind"</h2>
-            <p class="px-10 pb-10 text-left">"Tailwind will scan your Rust files for Tailwind class names and compile them into a CSS file."</p>
-            <button
-                class="bg-sky-600 hover:bg-sky-700 px-5 py-3 text-white rounded-lg"
-                on:click=move |_| set_count.update(|count| *count += 1)
-            >
-                {move || if count() == 0 {
-                    "Click me!".to_string()
-                } else {
-                    count().to_string()
-                }}
-            </button>
+        <main class="container">
+            <h1>"Bluey & Bingo Color Palette"</h1>
+            <div class="palette">
+            <div class="color" style="background-color: var(--bluey-darker);">"Bluey Darker"</div>
+            <div class="color" style="background-color: var(--bluey-dark);">"Bluey Dark"</div>
+            <div class="color" style="background-color: var(--bluey-medium);">"Bluey Medium"</div>
+            <div class="color" style="background-color: var(--bluey-light);">"Bluey Light"</div>
+            <div class="color" style="background-color: var(--bluey-lightest);">"Bluey Lightest"</div>
+            <div class="color" style="background-color: var(--bluey-accent);">"Bluey Accent"</div>
+          </div>
+          <div class="palette">
+            <div class="color" style="background-color: var(--bingo-dark);">"Bingo Dark"</div>
+            <div class="color" style="background-color: var(--bingo-medium);">"Bingo Medium"</div>
+            <div class="color" style="background-color: var(--bingo-light);">"Bingo Light"</div>
+          </div>
         </main>
+        <span id="forkongithub"><a href="https://github.com/ngmisl/blueyish" target="_blank">"Fork me"</a></span>
     }
 }
