@@ -8,7 +8,7 @@ pub fn App(cx: Scope) -> impl IntoView {
 
     view! {
         cx,
-        <Title text="Welcome to Blueysh" />
+        <Title text="Blueysh: A Color Palette Inspired by Bluey" />
         <Router>
             <Routes>
                 <Route path="" view=move |cx| view! { cx, <HomePage /> } />
@@ -36,7 +36,9 @@ pub fn HomePage(cx: Scope) -> impl IntoView {
             <div class="color" style="background-color: var(--bingo-medium);">"Bingo Medium"</div>
             <div class="color" style="background-color: var(--bingo-light);">"Bingo Light"</div>
           </div>
+          <div>"Made with 💕 by " <a href="https://ngmi.ai" target="_blank">"NGMI"</a>
+          " + " <a href="https://github.com/leptos-rs/leptos" target="_blank">"Leptos"</a></div>
+          <span id="forkongithub"><a href="https://github.com/ngmisl/blueyish" target="_blank">"Fork me"</a></span>
         </main>
-        <span id="forkongithub"><a href="https://github.com/ngmisl/blueyish" target="_blank">"Fork me"</a></span>
     }
 }

@@ -1,7 +1,9 @@
-/* Import JetBrains Mono Nerd Font */
 @import url("https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf");
 
+/* Import JetBrains Mono Nerd Font */
+
 /* Define Bluey and Bingo color palette */
+
 :root {
   --bluey-darker: #09233b;
   --bluey-dark: #0b3d91;
@@ -10,13 +12,13 @@
   --bluey-lightest: #bbdefb;
   --bluey-text: #e3f2fd;
   --bluey-accent: #ffa726;
-
   --bingo-dark: #b36c66;
   --bingo-medium: #e4897b;
   --bingo-light: #f4afa6;
 }
 
 /* General styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -100,6 +102,7 @@ select:focus {
 }
 
 /* Responsive layout styles */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -140,10 +143,12 @@ section {
   position: relative;
   transition: 0.5s;
 }
+
 #forkongithub a:hover {
   background: #e4897b;
   color: #fff;
 }
+
 #forkongithub a::before,
 #forkongithub a::after {
   content: "";
@@ -155,10 +160,12 @@ section {
   height: 1px;
   background: #fff;
 }
+
 #forkongithub a::after {
   bottom: 1px;
   top: auto;
 }
+
 @media screen and (min-width: 1200px) {
   #forkongithub {
     position: fixed;
@@ -170,6 +177,7 @@ section {
     height: 200px;
     z-index: 9999;
   }
+
   #forkongithub a {
     width: 200px;
     position: absolute;
@@ -185,6 +193,7 @@ section {
 }
 
 /* New footer styles */
+
 footer {
   background-color: var(--bluey-darker);
   padding: 10px;
