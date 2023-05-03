@@ -13,38 +13,11 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Blueysh">
 
-    <link rel="icon" href="/favicon-4dc2c754d1296cc6.ico">
-    <link rel="stylesheet" href="/output-277426056f719cff.css">
+    <link rel="icon" href="/bluey-demo/favicon-4dc2c754d1296cc6.ico">
+    <link rel="stylesheet" href="/bluey-demo/output-277426056f719cff.css">
   
-<link rel="preload" href="/leptos-csr-23cc6efeb82a8175_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/leptos-csr-23cc6efeb82a8175.js"></head>
+<link rel="preload" href="/bluey-demo/leptos-csr-222754fbd4408cd1_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/bluey-demo/leptos-csr-222754fbd4408cd1.js"></head>
   <body>
 
-<script type="module">import init from '/leptos-csr-23cc6efeb82a8175.js';init('/leptos-csr-23cc6efeb82a8175_bg.wasm');</script><script>(function () {
-    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    var url = protocol + '//' + window.location.host + '/_trunk/ws';
-    var poll_interval = 5000;
-    var reload_upon_connect = () => {
-        window.setTimeout(
-            () => {
-                // when we successfully reconnect, we'll force a
-                // reload (since we presumably lost connection to
-                // trunk due to it being killed, so it will have
-                // rebuilt on restart)
-                var ws = new WebSocket(url);
-                ws.onopen = () => window.location.reload();
-                ws.onclose = reload_upon_connect;
-            },
-            poll_interval);
-    };
-
-    var ws = new WebSocket(url);
-    ws.onmessage = (ev) => {
-        const msg = JSON.parse(ev.data);
-        if (msg.reload) {
-            window.location.reload();
-        }
-    };
-    ws.onclose = reload_upon_connect;
-})()
-</script></body></html>
+<script type="module">import init from '/bluey-demo/leptos-csr-222754fbd4408cd1.js';init('/bluey-demo/leptos-csr-222754fbd4408cd1_bg.wasm');</script></body></html>
