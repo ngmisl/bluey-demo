@@ -2,7 +2,7 @@
 target = "index.html"
 release = false
 dist = "dist"
-public_url = "/"
+public_url = "/bluey-demo/"
 filehash = true
 
 [serve]
@@ -14,4 +14,10 @@ no_autoreload = false
 [[hooks]]
 stage = "pre_build"
 command = "npx"
-command_arguments = ["tailwindcss", "-i", "./input.css", "-o", "./style/output.css"]
+command_arguments = [
+    "tailwindcss",
+    "-i",
+    "./input.css",
+    "-o",
+    "./style/output.css",
+]

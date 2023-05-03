@@ -9,8 +9,8 @@ pub fn App(cx: Scope) -> impl IntoView {
     view! {
         cx,
         <Title text="Blueysh: A Color Palette Inspired by Bluey" />
-        <Router>
-            <Routes>
+        <Router base="bluey-demo">
+            <Routes base={String::from("bluey-demo")}>
                 <Route path="" view=move |cx| view! { cx, <HomePage /> } />
             </Routes>
         </Router>
